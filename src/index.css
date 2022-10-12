@@ -1,0 +1,98 @@
+:root {
+  --operators-yellow: rgb(255, 170, 0);
+  --dark-grey: rgb(71, 70, 70);
+  --neutral: rgb(196, 195, 195);
+}
+
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 250, 250);
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 100%;
+  border: 1px solid;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+}
+
+.display {
+  padding: 40px 26px 15px;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 50px;
+}
+
+.display span {
+  font-size: 20px;
+  color: var(--neutral);
+  padding-right: 5px;
+}
+
+button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  appearance: none;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px;
+}
+
+.keys button {
+  margin: 0 7px 7px;
+}
+
+#ops {
+  background-color: var(--operators-yellow);
+  color: white;
+}
+
+#nums {
+  background-color: var(--dark-grey);
+  color: white;
+}
+
+#other-ops {
+  background-color: var(--neutral);
+}
+
+.fifthRow #zero {
+  border-radius: 40px;
+  width: 132px;
+  color: white;
+  text-align: left;
+  padding-left: 25px;
+  background-color: var(--dark-grey);
+}
