@@ -10,8 +10,10 @@ function Table() {
     if (
       (operators.includes(value) && calc === "") ||
       (operators.includes(value) && operators.includes(calc.slice(-1)))
-    )
+    ) {
       return;
+    }
+
     setCalc(calc + value);
 
     if (!operators.includes(value)) {
@@ -24,7 +26,7 @@ function Table() {
   };
 
   const calculate = () => {
-    setCalc(eval(calc));
+    setCalc(eval(calc).toString());
   };
 
   // const addSign = () => {
